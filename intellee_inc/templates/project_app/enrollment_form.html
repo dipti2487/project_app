@@ -1,0 +1,37 @@
+{% extends "project_app/index.html" %}
+{% block content %}
+
+ <div class="container-fluid">
+   <a href="{% url 'home' %}">Home</a><br>
+  <h4>Enrollment Form</h4>
+  <hr>
+  <h4>Request Enrollment</h4>
+  <br>
+    <form class="" method="post" novalidate>
+    {% csrf_token %}
+  <label for="fname">Your Name</label>
+  <input name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+    <div class="mb-3">
+      <label for="exampleInputEmail" class="form-label">Your Email</label>
+      <input name="email"class="form-control" id="exampleInputEmail" placeholder="">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder=""></input>
+    </div>
+    <div class="mb-3">
+      <label for="select_courses">Select a course:</label>
+        <select id="select_courses">
+          <option value="PYTHON">Python</option>
+          <option value="DJANGO">Django</option>
+          <option value="REACT_JS">React_js</option>
+          <option value="JAVASCRIPT">Javascript</option>
+          <option value="DEVOPS" selected>Devops</option>
+        </select>
+
+    </div>
+
+    <input type="submit" class= "btn btn-success btn-lg mt-1 ml-4" name="" value="submit">
+  </div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "project_app/index.html" %}
+{% load static %}
+{% block content %}
+<style type="text/css">
+
+  body {
+     background: url('{% static "css/keyboard.jpg" %}') no-repeat center center fixed;
+     background-size: cover;
+     opacity:0.5;
+  }
+  .navbar-nav > .active > a { background-color: #ffffff; }
+
+  .container{
+    background: white;
+    text-align: center;
+    padding: 35px 25px 50px 10px;
+    border-style: double;
+    margin:50px auto 50px auto;
+    display: grid;
+  }
+
+  p{
+    color: black;
+    text-align: center;
+  }
+
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">InTellee Inc.</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="{% url 'signup' %}">Signup</a>
+      <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+      <a class="nav-item nav-link" href="{% url 'courses' %}">Courses</a>
+      <a class="nav-item nav-link" href="{% url 'appointment' %}">Book Appointment</a>
+      <a class="nav-item nav-link" href="{% url 'enrollment' %}">Enrollment Form </a>
+      <a class="nav-item nav-link" href="{% url 'contact' %}">Contact Us</a>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <h1>Enroll Here</h1>
+     <br>
+    <h3>Who We Are</h3>
+    <p>InTellee believes in excellence. Quality training services, latest technical know-how & Trends, student’s personal growth, Practical Approach, Student satisfaction and success, is our commitment. We care for the students who show their eminent and unbounded interest in their growth. A Student’s personal growth supports his family’s growth, the family’s growth supports society’s growth and ultimately the society’s growth supports the nation’s growth. At inTellee, we aim to foster 21st century education to meet the demanding needs of the industry.
+
+ We want to help you fully utilize your core strengths, technical expertise and educational qualifications to get you into the dream job your life. Whether you are looking to make a career change, upgrade your work or up-skill, we help foster a unique and fulfilling journey to achieving your goals. inTellee helps you to Market Your Talent, helping you learn towards your future and finally achieve your full potential.
+
+  Join us and learn under the instruction of industry experts.
+
+  After Successful completion of your course, inTellee is committed to providing you free career consultation which will open the doors for you in the corporate world.</p>
+
+  </div>
+</body>
+
+{% endblock %}

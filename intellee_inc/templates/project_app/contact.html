@@ -1,0 +1,29 @@
+{% extends "project_app/index.html" %}
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">Intellee Inc</a>
+  </div>
+</nav><br>
+  <h1 class ="text-center">Contact Form</h1>
+  <div class="container">
+  <form class="" method="post">
+    {% csrf_token %}
+      <div class="mb-3">
+        <label for="fname">Your Name</label>
+        <input name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail" class="form-label">Your Email</label>
+        <input name="email"class="form-control" id="exampleInputEmail" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="comment" class="form-label">Comment</label>
+        <textarea name="comment" class="form-control" id="comment" name="comment" placeholder=""></textarea>
+      </div>
+      <input type="submit" class= "btn btn-success btn-lg mt-1 ml-4" name="" value="submit">
+</form>
+</div>
+
+
+{% endblock %}
